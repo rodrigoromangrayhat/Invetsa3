@@ -1,0 +1,3599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_maquina_twin_shot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.grayhatcorp.invetsa.invetsa.Maquina_zootec">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COMPAÃ‘IA:"/>
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoCompania"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PLANTA DE ENCUBACION:"/>
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoPlantaEncubacion"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DIRECCION:"/>
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoDireccion"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="JEFE DE PLANTA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewJefePlanta"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENCARGADO DE MAQUINAS:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewEncargado"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CODIGO MAQUINA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/autoMaquina"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FECHA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewFecha"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HORA DE INGRESO:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewHoradeIngreso"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HORA DE SALIDA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewHoradeSalida"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ULTIMA VISITA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewUltimaVisita"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="1.- INSPECCION VISUAL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6cac24"
+            android:textStyle="normal|bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Codigo Sistema"
+                        style="@style/CodProveedorCabeseraZootec"
+                        />
+                    <TextView
+                        android:text="Codigo Proveedor"
+                        style="@style/CodProveedorCabeseraZootec"
+                        />
+                    <TextView
+                        android:text="Descripcion"
+                        style="@style/DescripcionCabeseraZootec" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Bueno"
+                            style="@style/opcionesBRM"
+                            />
+                        <TextView
+                            android:text="Regular"
+                            style="@style/opcionesBRM" />
+                        <TextView
+                            android:text="Malo"
+                            style="@style/opcionesBRM" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:text="Codigo Sistema"
+                        style="@style/CodProveedorCabeseraZootec"
+                        />
+
+                    <TextView
+                        android:text="Codigo Proveedor"
+                        style="@style/CodProveedorCabeseraZootec"/>
+                    <TextView
+                        android:text="Descripcion"
+                        style="@style/DescripcionCabesera"/>
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Bueno"
+                            style="@style/opcionesBRM" />
+                        <TextView
+                            android:text="Regular"
+                            style="@style/opcionesBRM" />
+                        <TextView
+                            android:text="Malo"
+                            style="@style/opcionesBRM"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="150px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="150px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="GABINETE"
+                        style="@style/DescripcionCabeseraZootec"
+                        android:id="@+id/textView6" />
+
+                    <TextView
+                        style="@style/Estado" />
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="NEUMATICA"
+                        style="@style/DescripcionCabeseraZootec"/>
+                    <TextView
+                        android:text=""
+                        style="@style/Estado" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT50"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLATO DIVISOR DEL MEDIO DEL GABINETE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlatoDivisor"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoPlatoDivisor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlatoDivisor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlatoDivisor"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT26"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="EMPAQUE P/CONECTOR MACHO AIRE(X10)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoEmpaqueConectorMAcho"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoEmpaqueConectorMAcho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularEmpaqueConectorMAcho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloEmpaqueConectorMAcho"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT51M-ZT51D"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CUBIERTA TRASERA CON LOGO DE MERIAL"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCubiertaTraseraconLogo"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCubiertaTraseraconLogo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCubiertaTraseraconLogo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCubiertaTraseraconLogo"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT30"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="PLATO DE MONTAJE C/TORNILLOS-MANOMETRO"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlatoMontajeTornilloManometro"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlatoMontajeTornilloManometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlatoMontajeTornilloManometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlatoMontajeTornilloManometro"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00477"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT52"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="BISAGRA PARA LA CUBIERTA DEL FRENTE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBisagraParaLaCubierta"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBisagraParaLaCubierta"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBisagraParaLaCubierta"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBisagraParaLaCubierta"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00501"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT14"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="BOTON DE REINICIO DEL CONTADOR"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBotondeReiniciodelContador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBotondeReiniciodelContador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBotondeReiniciodelContador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBotondeReiniciodelContador"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT53S-ZT53DNS"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CUBIERTA DEL FRENTE EN ACERO INOX"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCubiertaEnAceroInox"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCubiertaEnAceroInox"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCubiertaEnAceroInox"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCubiertaEnAceroInox"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00502"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT16"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="MECANISMO INTERNO BOTON REINICIADOR"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoMecanismoInternoBoton"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoMecanismoInternoBoton"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularMecanismoInternoBoton"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloMecanismoInternoBoton"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT54-2T54D"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TAPA INFERIOR DEL GABINETE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTapaInferiordelGabinete"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTapaInferiordelGabinete"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTapaInferiordelGabinete"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTapaInferiordelGabinete"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00496"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT08"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="INTERRUPTOR ENCENDIDO/APAGADO"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoInterruptorENcendido"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoInterruptorENcendido"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularInterruptorENcendido"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloInterruptorENcendido"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00478"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT55"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PATA DE GOMA"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPatadeGoma"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPatadeGoma"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPatadeGoma"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPatadeGoma"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00499"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT10"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="MEC. INTERNO P/INTERRUPTOR ON/OFF"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoMecInternoONOFF"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoMecInternoONOFF"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularMecInternoONOFF"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloMecInternoONOFF"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLATO DE COLOCACION"
+                        style="@style/DescripcionCabeseraZootec"/>
+                    <TextView
+                        style="@style/Estado"/>
+
+                    <TextView
+                        android:text="RPTO-00469"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT11"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="BOTON DE PRUEBA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBotondePrueba"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBotondePrueba"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBotondePrueba"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBotondePrueba"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00363"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT46"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TORNILLO P/L CUBIERTA DEL PLATO"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTornilloCuniertadePlato"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTornilloCuniertadePlato"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTornilloCuniertadePlato"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTornilloCuniertadePlato"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00500"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT13"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="MEC. INTERNO DEL BOTON DE PRUEBA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoMecInternoBotondePrueba"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoMecInternoBotondePrueba"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularMecInternoBotondePrueba"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloMecInternoBotondePrueba"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00508"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT45"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TUERCA MONTAJE DEL PLATO DE COLOCACION"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTuercaMontajedelPlatodeColocacion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuercaMontajedelPlatodeColocacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuercaMontajedelPlatodeColocacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuercaMontajedelPlatodeColocacion"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00497"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT091"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="INTERRUPTOR PRE-SELECCION METODO INY."
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoInterruptorPReseleccion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoInterruptorPReseleccion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularInterruptorPReseleccion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloInterruptorPReseleccion"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00362"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT44"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="BOTON DE TOQUE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBotondeToque"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBotondeToque"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBotondeToque"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBotondeToque"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00498"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT092"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="MEC. INTERNO P/INTERRUPTOR PRE-SELECCION"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoMecInterPreSeleccion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoMecInterPreSeleccion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularMecInterPreSeleccion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloMecInterPreSeleccion"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00349"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT43"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="MICRO VALVULA P. ACTIVAR CILINDRO DE AIRE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoMicroValvulaCilindro"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoMicroValvulaCilindro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularMicroValvulaCilindro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloMicroValvulaCilindro"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00504"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT27"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="VALVULA NEUMATICA DE LA AGUJA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvulaNeumaticaAguja"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoValvulaNeumaticaAguja"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvulaNeumaticaAguja"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvulaNeumaticaAguja"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT42"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CUBIERTA DEL PLATO DE COLOCACION"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCubiertadelPlatoColocacion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCubiertadelPlatoColocacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCubiertadelPlatoColocacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCubiertadelPlatoColocacion"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00505"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT37"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CELULA LOGICA AZUL"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCelulaLogicaAzul"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCelulaLogicaAzul"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCelulaLogicaAzul"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCelulaLogicaAzul"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT41"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLATO DE COLOCACION"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlatodeColocacion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlatodeColocacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlatodeColocacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlatodeColocacion"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00506"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT38"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CELULA LOGICA GRIS"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCelulaLogicaGris"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCelulaLogicaGris"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCelulaLogicaGris"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCelulaLogicaGris"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT40"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLATO DE COLOCACION EMSAMBLAJE CUBIERTA"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlatoColocacionEmsamblaje"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlatoColocacionEmsamblaje"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlatoColocacionEmsamblaje"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlatoColocacionEmsamblaje"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00507"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT39"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CELULA LOGICA AMARILLA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCelulaLogicaamarrilla"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCelulaLogicaamarrilla"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCelulaLogicaamarrilla"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCelulaLogicaamarrilla"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT410"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TORNILLO PARA ZT409NS"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTornilloZt40pns"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTornilloZt40pns"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTornilloZt40pns"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTornilloZt40pns"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00476"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT355"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="VALVULA DE ACTIVACION PARA EL ZT35"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvulaDeActivacion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoValvulaDeActivacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvulaDeActivacion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvulaDeActivacion"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT409"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLACA DE MONTAJE PARA TTP"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlacadeMontajeTTP"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlacadeMontajeTTP"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlacadeMontajeTTP"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlacadeMontajeTTP"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT367"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="ON-OFF INTERRUPTOR DE PRUEBA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoOnOffInterruptor"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoOnOffInterruptor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularOnOffInterruptor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloOnOffInterruptor"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT407"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONECTOR Y (4mm)"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorY4mm"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorY4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorY4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorY4mm"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT365"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="ON-OFF MECANISMO DE CAMBIO DE PRUEBA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoOnOffMecanismodeCambio"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoOnOffMecanismodeCambio"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularOnOffMecanismodeCambio"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloOnOffMecanismodeCambio"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT406"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="SENSOR DE SANGRADO"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSensordeSangrado"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoSensordeSangrado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSensordeSangrado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSensordeSangrado"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT368"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="SIMPLE/DOBLE MECANISMO (INTERRUPTOR DE MODO)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSimpleDobleMecanismo"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoSimpleDobleMecanismo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSimpleDobleMecanismo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSimpleDobleMecanismo"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT405"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TORNILLO PARA ZT403NS (x2)"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTornilloZT403NS"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTornilloZT403NS"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTornilloZT403NS"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTornilloZT403NS"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT366"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="SIMPLE/DOBLE MECANISMO DEL INTERRUPTOR"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSimpleDobleMecanismodelInterruptor"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoSimpleDobleMecanismodelInterruptor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSimpleDobleMecanismodelInterruptor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSimpleDobleMecanismodelInterruptor"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT403"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="BOTON TACTIL"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBotonTactil"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBotonTactil"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBotonTactil"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBotonTactil"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT363"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CONECTOR RECTO 4MM"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorrecto4mm"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorrecto4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorrecto4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorrecto4mm"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT401"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TTP CUERPO DE LA PLACA"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCuerpodelaPlaca"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCuerpodelaPlaca"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCuerpodelaPlaca"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCuerpodelaPlaca"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT370"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="VALVULA RETENCION EN LINEA(VAL. FLUJO LIBRE)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvulaRetencionLinea"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoValvulaRetencionLinea"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvulaRetencionLinea"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvulaRetencionLinea"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT400"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONJUNTO DE PLACA TACTIL DOBLE TTP"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConjuntodePlacaTactil"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConjuntodePlacaTactil"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConjuntodePlacaTactil"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConjuntodePlacaTactil"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT362"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="VALVULA UNIDIRECCIONAL"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValuvulaUnidireccional"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoValuvulaUnidireccional"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValuvulaUnidireccional"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValuvulaUnidireccional"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="JERINGAS/TUBERIAS"
+                        style="@style/DescripcionCabeseraZootec"/>
+                    <TextView
+                        android:text=""
+                        style="@style/Estado"/>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT357"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CONECTOR T (4MM)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorT4mm"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorT4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorT4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorT4mm"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT57SM"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="JERINGA SECUNDARIA DE 0.1 ML"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoJeringaSecundaria01ml"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoJeringaSecundaria01ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularJeringaSecundaria01ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloJeringaSecundaria01ml"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT356"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="DISTRIBUIDOR DE AIRE MULTIPLE"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoDistribuidordeAireMultiple"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoDistribuidordeAireMultiple"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularDistribuidordeAireMultiple"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloDistribuidordeAireMultiple"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00457"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT58SM"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="JERINGA SECUNDARIA DE 0.2 ML"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoJeringaSecundario2ml"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoJeringaSecundario2ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularJeringaSecundario2ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloJeringaSecundario2ml"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT358"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CONECTOR EN CRUZ (4MM)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorenCruz4mm"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorenCruz4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorenCruz4mm"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorenCruz4mm"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00512"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT63M"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TUERCA DE SEGURIDAD PUNTA JERINGA"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTuercaSeguridadPuntaJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuercaSeguridadPuntaJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuercaSeguridadPuntaJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuercaSeguridadPuntaJeringa"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT361"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="VALVULA DE TRES SALIDAS (VALVULA MAC)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvula3salidasMac"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoValvula3salidasMac"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvula3salidasMac"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvula3salidasMac"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT626"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONECTOR PARA ZT621NS-ZT625NS"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorZT621NS"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorZT621NS"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorZT621NS"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorZT621NS"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT360"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CELULA + BASE (RELE SENSOR AMARILLO)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCelulabaseAmarillo"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCelulabaseAmarillo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCelulabaseAmarillo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCelulabaseAmarillo"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT623NS"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TUBERIA PARA CONECTAR JERINGAS P./S. (x10)NS"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTuberiaParaJeringasx10NS"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuberiaParaJeringasx10NS"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuberiaParaJeringasx10NS"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuberiaParaJeringasx10NS"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT369"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="VALVULA DE IMPULSO+CONECTOR"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvuladeImpulsoConector"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoValvuladeImpulsoConector"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvuladeImpulsoConector"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvuladeImpulsoConector"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00351"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT623"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TUBERIA PARA CONECTAR JERINGAS P./S.(x10)"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTuberiaParaConectarJeringasx10"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuberiaParaConectarJeringasx10"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuberiaParaConectarJeringasx10"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuberiaParaConectarJeringasx10"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00511"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT625NS"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="ESPACIADOR ENTRADA D/L SEGUNDA JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoEspaciadorentradaSegundaJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoEspaciadorentradaSegundaJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularEspaciadorentradaSegundaJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloEspaciadorentradaSegundaJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="KIT INYECCION"
+                        style="@style/DescripcionZootec"/>
+
+                    <TextView
+
+                        style="@style/Estado"/>
+
+                    <TextView
+                        android:text="RPTO-00357"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT19"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CILINDRO DE AIRE CON TUERCA DE MONTAJE"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCilindroAireTuercaMontaje"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCilindroAireTuercaMontaje"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCilindroAireTuercaMontaje"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCilindroAireTuercaMontaje"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00358"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT661M"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="JUEGO EMPAQUES 1 MILLON INY. 0.1ML"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoJuegoEmpaques01ml"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoJuegoEmpaques01ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularJuegoEmpaques01ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloJuegoEmpaques01ml"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00503"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT20"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CONECTOR DE 4mm P/CILINDRO AIRE"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorde4mmCilindroaire"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorde4mmCilindroaire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorde4mmCilindroaire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorde4mmCilindroaire"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00359"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT681M"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="JUEGO EMPAQUES 1MILLON INY. 0.2ML"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoJuegoEmpaques02ml"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoJuegoEmpaques02ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularJuegoEmpaques02ml"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloJuegoEmpaques02ml"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00471"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT191"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="DETECTOR MANETICO DE POSICION P/CILINDRO DE AIRE"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoDetectorMAnetico"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoDetectorMAnetico"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularDetectorMAnetico"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloDetectorMAnetico"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="NEUMATICA"
+                        style="@style/DescripcionCabeseraZootec"/>
+
+                    <TextView
+
+                        style="@style/Estado"/>
+
+                    <TextView
+                        android:text="RPTO-00348"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT21B"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="CONECTOR PARA ACOPLE DE LA JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorPAraAcopleJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorPAraAcopleJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorPAraAcopleJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorPAraAcopleJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT01-ZT01NS"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="MANOMETRO"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoManometro"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoManometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularManometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloManometro"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT212"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="IMPULSADOR/ESPACIADOR D/L JERINGA SECUNDARIA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoImpulsadorEspaciador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoImpulsadorEspaciador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularImpulsadorEspaciador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloImpulsadorEspaciador"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT02"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONTADOR DE LOTE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoContadordeLote"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoContadordeLote"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularContadordeLote"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloContadordeLote"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00474"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT33"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="RESORTES P/SOSTENEDOR DE LA JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoResortessostenedorJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoResortessostenedorJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularResortessostenedorJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloResortessostenedorJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00466"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT03"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONTADOR TOTALIZADOR"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoContadortotalizador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoContadortotalizador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularContadortotalizador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloContadortotalizador"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00369"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT311"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="SOSTENEDOR DE LA JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GruposostenedorJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenosostenedorJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularsostenedorJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MalosostenedorJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT04"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CUBIERTA DEL CONT. LOTE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCubiertaConLote"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCubiertaConLote"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCubiertaConLote"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCubiertaConLote"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT91"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="TORNILLOS DE FIJACION 6x20 para zt31(x2)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTornillosdeFijacion6x20"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTornillosdeFijacion6x20"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTornillosdeFijacion6x20"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTornillosdeFijacion6x20"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00468"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT05"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CUBIERTA CONT. TOTALIZADOR"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCubiertaContTotalizador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoCubiertaContTotalizador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCubiertaContTotalizador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCubiertaContTotalizador"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT911"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="TORNILLOS DE FIJACION 6x50"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTornillosFijacion6x50"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTornillosFijacion6x50"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTornillosFijacion6x50"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTornillosFijacion6x50"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT06"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLACA PARA FIJAR EL CONT. LOTE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlacaFijarContLote"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlacaFijarContLote"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlacaFijarContLote"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlacaFijarContLote"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00475"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT34"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="PLACA P/MONT. DEL SOSTENEDOR D/L JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlacaMonsostenedorJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlacaMonsostenedorJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlacaMonsostenedorJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlacaMonsostenedorJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT07"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="PLACA PARA FIJAR EL CONT. TOTALIZADOR"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlacaFijarContotalizador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlacaFijarContotalizador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlacaFijarContotalizador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlacaFijarContotalizador"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT49"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="PLATO GUIA P/SOSTENEDOR D/L JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlatosostenedorDeJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPlatosostenedorDeJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlatosostenedorDeJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlatosostenedorDeJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00364"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT17"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="FILTRO REGULADOR"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoFiltroRegulador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoFiltroRegulador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularFiltroRegulador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloFiltroRegulador"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT84"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="PROBETA CALIBRADOR"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoProbetaCalibrador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoProbetaCalibrador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularProbetaCalibrador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloProbetaCalibrador"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00470"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT18"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONECTOR ESPIGADO EN CODO 1/4 P/FILTRO"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorEspigado"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorEspigado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorEspigado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorEspigado"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT83M"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="PIEZA FINAL DEL PISTON DE LA JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPiezafinalPistonJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoPiezafinalPistonJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPiezafinalPistonJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPiezafinalPistonJeringa"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00472"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT23"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONECTOR MACHO PARA AIRE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorMAchoAire"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorMAchoAire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorMAchoAire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorMAchoAire"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT82M"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="RESORTES DEL EMBOLO D/L JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoResortesEmbolo"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoResortesEmbolo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularResortesEmbolo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloResortesEmbolo"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00355"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT24"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="CONECTOR HEMBRA PARA AIRE"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorHembraaire"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoConectorHembraaire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorHembraaire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorHembraaire"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT81M"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="TUERCA TAPA D/EMBOLO D/L JERINGA"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTuercaTapaEmbolo"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuercaTapaEmbolo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuercaTapaEmbolo"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuercaTapaEmbolo"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT25"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ACOPLE REDUCTOR CONECTOR DEL MANOMETRO"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoAcopleReductorMAnometro"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoAcopleReductorMAnometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularAcopleReductorMAnometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloAcopleReductorMAnometro"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT90"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="TORNILLO 4x16 P/L PIEZA FINAL D/L JERINGA ZT83M"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTornillo4x16"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTornillo4x16"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTornillo4x16"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTornillo4x16"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="RPTO-00473"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT28"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="TAPON DE GOMA(VALAGUJA)"
+                        style="@style/DescripcionZootec"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoTapondeGoma"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTapondeGoma"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTapondeGoma"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTapondeGoma"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="RPTO-00368"
+                        style="@style/CodProveedorZootec"/>
+                    <TextView
+                        android:text="ZT101"
+                        style="@style/CodProveedorZootec" />
+                    <TextView
+                        android:text="ACEITE VASELINA EN SPRAY (VEGETAL)"
+                        style="@style/DescripcionZootec" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoAceiteVegetal"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoAceiteVegetal"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularAceiteVegetal"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloAceiteVegetal"/>
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservaciones1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Piezas Cambiadas"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtPiezasCambiadas1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservaciones2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Piezas Cambiadas"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtPiezasCambiadas2"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.-INSPECCION DEL FUNCIONAMIENTO"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.-LIMPIEZA Y DESINFECCION"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/CriterioCabezera"
+                            android:text="CRITERIOS DE EVALUACION"/>
+                        <LinearLayout
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:text="BUENO"
+                                android:id="@+id/textView7" />
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:text="MALO"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="UBICACION DE LA MAQUINA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoUbicaciondelaMAquina">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoUbicaciondelaMAquina"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloUbicaciondelaMAquina"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="PRESION DE COMPRESORA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoPresionCompresora">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoPresionCompresora"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloPresionCompresora"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="PRESION DE MAQUINA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoPresionMAquina">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoPresionMAquina"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloPresionMAquina"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="ACTIVACION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoActivacion">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoActivacion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloActivacion"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="FUNCIONES DE CONTADORES"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoFuncionesDeContadores">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoFuncionesDeContadores"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloFuncionesDeContadores"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="FUNCIONES SILVATO"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoFuncionesdeSilvato">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoFuncionesdeSilvato"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloFuncionesdeSilvato"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="SALIDA DE AGUJA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoSalidadeAguja">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoSalidadeAguja"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloSalidadeAguja"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="CALIBRACION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoCalibracion">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoCalibracion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloCalibracion"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/CriterioCabezera"
+                            android:text="CRITERIOS DE EVALUACION"
+                            android:id="@+id/textView8" />
+
+                        <LinearLayout
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:text="BUENO"
+                                />
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="MATERIALES UTILIZADOS"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoMaterialesUtilizados">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoMaterialesUtilizados"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloMaterialesUtilizados"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="CAMBIO PZS. DESCARTABLES"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoCambioPiezasDescartables">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoCambioPiezasDescartables"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloCambioPiezasDescartables"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="LIMPIEZA /PLATO COLOCACION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoLimpiezadePlacaTwin">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoLimpiezadePlatoColocaion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloLimpiezadePlatoColocaion"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="ESTERILIZADO DE JERINGA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoEsterilizadodeJeringa">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoEsterilizadodeJeringa"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloEsterilizadodeJeringa"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="LIMPIEZA MODULO INYECTOR"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoLimpiezaModuloInyector">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoLimpiezaModuloInyector"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloLimpiezaModuloInyector"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="LIMPIEZA DEL CEREBRO"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoLimpiezadelCerebro">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoLimpiezadelCerebro"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloLimpiezadelCerebro"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="SECADO"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoSecado">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoSecado"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloSecado"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="PROTECCION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoProteccion">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoProteccion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloProteccion"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservaciones12"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FRECUENCIA DE USO"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtPiezasFrecuenciadeUso"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservaciones22"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CANTIDAD DE AVES VACUNADAS / DIA"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtAvesVacunadas"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:orientation="horizontal"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:text="JEFE DE PLANTA DE INCUBACION"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+
+                    >
+
+                    <TextView
+                        android:text="POR: INVETSA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Guardar Datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Guardar" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Cancelar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cancelar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

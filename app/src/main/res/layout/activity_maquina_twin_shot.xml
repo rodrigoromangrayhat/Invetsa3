@@ -1,0 +1,2577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_maquina_twin_shot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.grayhatcorp.invetsa.invetsa.MaquinaTwinShot">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COMPAÃ‘IA:"/>
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoCompania"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PLANTA DE ENCUBACION:"/>
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoPlantaEncubacion"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DIRECCION:"/>
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoDireccion"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="JEFE DE PLANTA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewJefePlanta"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENCARGADO DE MAQUINAS:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewEncargado"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CODIGO MAQUINA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewCodigoMaquina"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FECHA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewFecha"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HORA DE INGRESO:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewHoradeIngreso"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HORA DE SALIDA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewHoradeSalida"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ULTIMA VISITA:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:id="@+id/TextViewUltimaVisita"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="1.- INSPECCION VISUAL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6cac24"
+            android:textStyle="normal|bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="Codigo Proveedor"
+                        style="@style/CodProveedorCabesera"
+                        />
+                    <TextView
+                        android:text="Descripcion"
+                        style="@style/DescripcionCabesera" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Bueno"
+                            style="@style/opcionesBRM"
+                            />
+                        <TextView
+                            android:text="Regular"
+                            style="@style/opcionesBRM" />
+                        <TextView
+                            android:text="Malo"
+                            style="@style/opcionesBRM" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="Codigo Proveedor"
+                        style="@style/CodProveedorCabesera"/>
+                    <TextView
+                        android:text="Descripcion"
+                        style="@style/DescripcionCabesera"/>
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Bueno"
+                            style="@style/opcionesBRM" />
+                        <TextView
+                            android:text="Regular"
+                            style="@style/opcionesBRM" />
+                        <TextView
+                            android:text="Malo"
+                            style="@style/opcionesBRM"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="ESTRUCTURA"
+                        style="@style/Descripcion"
+                        android:id="@+id/textView6" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="150px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ACCESORIOS"
+                        style="@style/Descripcion" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-131"
+                        style="@style/CodProveedor"/>
+                    <TextView
+                        android:text="BASE DE ALUMINIO"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBaseAluminio"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoBaseAluminio"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBaseAluminio"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBaseAluminio"/>
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:text="AV-1376"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="RESORTES"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoResortes"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularResortes"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloResortes"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="AV-1331"
+                        style="@style/CodProveedor"/>
+                    <TextView
+                        android:text="BLOQUE POSTERIOR"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/Grupo"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoBloquePosteriror"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBloquePosteriror"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBloquePosteriror"/>
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:text="AV-1377"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="BOLITAS DE ACERO"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBolitasAcero"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBolitasAcero"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBolitasAcero"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13413"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="BLOQUE DE CILINDRO DE FUERZA"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBloqueCilindro"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoBloqueCilindro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBloqueCilindro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBloqueCilindro"/>
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:text="AV-13523"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="REGULADORES SALIDA DE AGUJA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoReguladoresdesalida"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoReguladoresdesalida"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularReguladoresdesalida"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloReguladoresdesalida"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13421"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="BLOQUE DE JERINGA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBloquedeJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoBloquedeJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBloquedeJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBloquedeJeringa"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="AV-230"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="DISTRIBUIDOR DE AIRE"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoDistribuidorAire"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoDistribuidorAire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularDistribuidorAire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloDistribuidorAire"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13511"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="BLOQUE DELANTERO GUIA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBoqueDelantero"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoBoqueDelantero"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBoqueDelantero"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBoqueDelantero"/>
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:text="AV-1032"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONECTOR RAPIDO DE ENTRADA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorRapidodeEntrada"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConectorRapidodeEntrada"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorRapidodeEntrada"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorRapidodeEntrada"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text=""
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="ACCESORIOS"
+                        style="@style/Descripcion" />
+
+                    <TextView
+                        android:text=""
+                        style="@style/Estado" />
+
+
+
+                    <TextView
+                        android:text="5430"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SILBATO"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSilbato"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSilbato"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSilbato"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSilbato"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-137"
+                        style="@style/CodProveedor"/>
+                    <TextView
+                        android:text="VALVULA DE CONTROL"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValuvulaControl"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoValuvulaControl"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValuvulaControl"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValuvulaControl"/>
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:text="5443"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONECTOR RAPIDO HEMBRA"
+                        style="@style/Descripcion"  />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorRapidoHembra"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConectorRapidoHembra"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorRapidoHembra"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorRapidoHembra"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1378"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="RPTO. DE VALVULA DE CONTROL"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoRPTOValvuladeControl"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoRPTOValvuladeControl"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularRPTOValvuladeControl"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloRPTOValvuladeControl"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="5445"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorRapidoMacho"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConectorRapidoMacho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorRapidoMacho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorRapidoMacho"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-111"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="PLACA TWIN TOUCH"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPlacaTwinTouch"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoPlacaTwinTouch"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPlacaTwinTouch"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPlacaTwinTouch"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="5728"
+                        style="@style/CodProveedor"/>
+                    <TextView
+                        android:text="VALVULA CUATRO SALIDAS"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvula4Salidas"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoValvula4Salidas"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvula4Salidas"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvula4Salidas"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-114"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="BOLITA DE TEFLON"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoBolitasdeTeflon"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularBolitasdeTeflon"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloBolitasdeTeflon"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="5700"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="VALVULA DE UNA SALIDA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvulade1Salida"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoValvulade1Salida"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvulade1Salida"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvulade1Salida"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="AV-117"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONECTOR DE AIRE DE TWIN SHOT"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectordeAireTwinShot"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConectordeAireTwinShot"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectordeAireTwinShot"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectordeAireTwinShot"/>
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:text="5709"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SUBPLACA SENCILLA"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSubplacaSencilla"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSubplacaSencilla"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSubplacaSencilla"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSubplacaSencilla"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-121"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SEGURO DE TAPA"
+                        style="@style/Descripcion"/>
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSegurodeTapa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSegurodeTapa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSegurodeTapa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSegurodeTapa"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:text="5730"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="RELAY SENSOR"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoRelaySensor"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoRelaySensor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularRelaySensor"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloRelaySensor"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-118"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="TUERCAS DE BASE DE ALUMINIO"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuercasBaseAluminio"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuercasBaseAluminio"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuercasBaseAluminio"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="5701"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CELULA NEGATIVA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCelulaNegativa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoCelulaNegativa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCelulaNegativa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCelulaNegativa"/>
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="5647"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CLAMP DE TUBERIA DE 1/2"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoClamTuberia"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoClamTuberia"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularClamTuberia"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloClamTuberia"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5738"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="VALVULA DE LA AGUJA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvuladelaAguja"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoValvuladelaAguja"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvuladelaAguja"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvuladelaAguja"/>
+                    </RadioGroup>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="5548"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CLAMP DE TUBERIA DE 5/16"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoClamTuberia516"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoClamTuberia516"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularClamTuberia516"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloClamTuberia516"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5703"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="VALVULA DE IMPULSO"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoValvuladeImpulso"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoValvuladeImpulso"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularValvuladeImpulso"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloValvuladeImpulso"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="5732"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="DETECTOR DE POSICION"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoDetectordePosicion"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoDetectordePosicion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularDetectordePosicion"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloDetectordePosicion"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5600"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="PATAS DE CAUCHO"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoPatasdeCaucho"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoPatasdeCaucho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularPatasdeCaucho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloPatasdeCaucho"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="3543"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONECTOR DE 5/32"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConector532"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConector532"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConector532"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConector532"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5710"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SWITCH DE TRES POSICIONES"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSwitchTresPosiciones"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSwitchTresPosiciones"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSwitchTresPosiciones"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSwitchTresPosiciones"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1346"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="ACOPLADURA COLDER MACHO"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoAcopladuraColderMacho"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoAcopladuraColderMacho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularAcopladuraColderMacho"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloAcopladuraColderMacho"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5726"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="REGULADOR DE AIRE"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoReguladordeAire"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoReguladordeAire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularReguladordeAire"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloReguladordeAire"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1344"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CILINDRO DE FUERZA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCilindrodeFuerza"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoCilindrodeFuerza"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCilindrodeFuerza"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCilindrodeFuerza"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5724"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="MANOMETRO"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoManometro"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoManometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularManometro"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloManometro"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1345"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CILINDRO DE AJUSTE"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoCilindrodeAjuste"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoCilindrodeAjuste"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularCilindrodeAjuste"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloCilindrodeAjuste"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5423"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONTADOR TOTAL"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoContadorTotal"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoContadorTotal"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularContadorTotal"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloContadorTotal"/>
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="5720"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONECTOR RAPIDO 5/32"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectorRapido532"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConectorRapido532"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectorRapido532"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectorRapido532"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5426"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="PROTECTOR DE CONTADOR TOTAL"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoProtectorContadorTotal"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoProtectorContadorTotal"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularProtectorContadorTotal"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloProtectorContadorTotal"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="5641"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONECTOR DE AIRE DE BRONCE"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoConectordeAiredeBronce"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoConectordeAiredeBronce"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularConectordeAiredeBronce"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloConectordeAiredeBronce"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5422"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="CONTADOR PREFIJADO"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoContadorPrefijado"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoContadorPrefijado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularContadorPrefijado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloContadorPrefijado"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13411"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SELLO DE CILINDRO DE FUERZA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSellodeCilindrodeFuerza"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSellodeCilindrodeFuerza"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSellodeCilindrodeFuerza"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSellodeCilindrodeFuerza"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5425"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="PROTECTOR CONTADOR PREFIJADO"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoProtectorContadorPrefijado"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoProtectorContadorPrefijado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularProtectorContadorPrefijado"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloProtectorContadorPrefijado"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13422"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="RETENEDOR DE JERINGA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoRetenedordeJeringa"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoRetenedordeJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularRetenedordeJeringa"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloRetenedordeJeringa"/>
+                    </RadioGroup>
+                    <TextView
+                        android:text="5418"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="RE-ESTABLECEDOR DE CONTADOR"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoRestablecedordeContador"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoRestablecedordeContador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularRestablecedordeContador"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloRestablecedordeContador"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13521"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SOSTENEDOR DE LA AGUJA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoSostenedorDelaAguja"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSostenedorDelaAguja"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSostenedorDelaAguja"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSostenedorDelaAguja"/>
+                    </RadioGroup>
+                    <TextView
+
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="JERINGAS Y TUBERIAS"
+
+                        style="@style/DescripcionCabesera" />
+                    <TextView
+                        android:text="JERINGAS Y TUBERIAS"
+
+                        style="@style/Estado" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-13522"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="TUERCA COLLARIN DE AGUJA"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuercaCollarindeAguja"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuercaCollarindeAguja"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuercaCollarindeAguja"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="AV-138"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="JERINGA DESCARTABLE"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoJeringaDescartable"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoJeringaDescartable"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularJeringaDescartable"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloJeringaDescartable"/>
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1374"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="EMPAQUE O ASIENTO"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoEmpaqueoAsiento"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularEmpaqueoAsiento"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloEmpaqueoAsiento"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="3520"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="TUBERIA PEQUEÃ‘A"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuberiaPequena"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuberiaPequena"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuberiaPequena"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1375"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="EMPAQUE O CAPTURA"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoEmpaqueoCaptura"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularEmpaqueoCaptura"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloEmpaqueoCaptura"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="SV-11155"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="TUBERIA LATEX"
+                        style="@style/Descripcion" />
+
+                    <LinearLayout
+                        style="@style/Estado"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/BuenoTuberiaLatex"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularTuberiaLatex"
+                            android:inputType="number"/>
+                        <EditText
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloTuberiaLatex"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="AV-1357"
+                        style="@style/CodProveedor" />
+                    <TextView
+                        android:text="SEGURO DE VALVULA"
+                        style="@style/Descripcion" />
+
+                    <RadioGroup
+                        style="@style/Estado"
+                        android:id="@+id/GrupoBuenoSeguroValvula"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            style="@style/opcionesBRM"
+
+                            android:id="@+id/BuenoSegurodeValvula"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/RegularSegurodeValvula"/>
+                        <RadioButton
+                            style="@style/opcionesBRM"
+                            android:id="@+id/MaloSegurodeValvula"/>
+                    </RadioGroup>
+                </TableRow>
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservacionesInspeccionVisual"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Piezas Cambiadas"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtPiezasCambiadasInspeccionVisual"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.-INSPECCION DEL FUNCIONAMIENTO"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.-LIMPIEZA Y DESINFECCION"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/CriterioCabezera"
+                            android:text="CRITERIOS DE EVALUACION"/>
+                        <LinearLayout
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:text="BUENO"
+                                android:id="@+id/textView7" />
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:text="MALO"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="UBICACION DE LA MAQUINA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoUbicaciondelaMAquina">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoUbicaciondelaMAquina"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloUbicaciondelaMAquina"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="PRESION DE COMPRESORA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoPresionCompresora">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoPresionCompresora"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloPresionCompresora"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="PRESION DE MAQUINA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoPresionMAquina">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoPresionMAquina"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloPresionMAquina"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="ACTIVACION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoActivacion">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoActivacion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloActivacion"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="FUNCIONES DE CONTADORES"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoFuncionesDeContadores">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoFuncionesDeContadores"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloFuncionesDeContadores"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="FUNCIONES SILVATO"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoFuncionesdeSilvato">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoFuncionesdeSilvato"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloFuncionesdeSilvato"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="SALIDA DE AGUJA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoSalidadeAguja">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoSalidadeAguja"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloSalidadeAguja"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="CALIBRACION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoCalibracion">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoCalibracion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloCalibracion"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/CriterioCabezera"
+                            android:text="CRITERIOS DE EVALUACION"
+                            android:id="@+id/textView8" />
+
+                        <LinearLayout
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:text="BUENO"
+                                />
+
+                            <TextView
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="MATERIALES UTILIZADOS"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoMaterialesUtilizados">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoMaterialesUtilizados"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloMaterialesUtilizados"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="CAMBIO PZS. DESCARTABLES"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoCambioPiezasDescartables">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoCambioPiezasDescartables"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloCambioPiezasDescartables"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="LIMPIEZA DE PLACA TWIN TOUCH"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoLimpiezadePlacaTwin">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoLimpiezadePlacaTwin"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloLimpiezadePlacaTwin"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="ESTERILIZADO DE VALVULA"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoEsterilizadodeValvula">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoEsterilizadodeValvula"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloEsterilizadodeValvula"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="LIMPIEZA MODULO INYECTOR"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoLimpiezaModuloInyector">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoLimpiezaModuloInyector"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloLimpiezaModuloInyector"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="LIMPIEZA DEL CEREBRO"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoLimpiezadelCerebro">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoLimpiezadelCerebro"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloLimpiezadelCerebro"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="SECADO"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoSecado">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoSecado"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloSecado"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="300px"
+                            android:layout_height="wrap_content"
+                            android:text="PROTECCION"/>
+
+                        <RadioGroup
+                            android:layout_width="200px"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:id="@+id/GrupoProteccion">
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:id="@+id/BuenoProteccion"/>
+
+                            <RadioButton
+                                android:layout_width="100px"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaloProteccion"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservacionesInspeccionFuncionamiento"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FRECUENCIA DE USO"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtPiezasFrecuenciadeUsoInspeccionFuncionamiento"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtObservacionesLimpiezaDesinfeccion"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CANTIDAD DE AVES VACUNADAS / DIA"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/txtAvesVacunadasLimpiezaDesinfeccion"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:orientation="horizontal"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:text="JEFE DE PLANTA DE INCUBACION"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+
+                    >
+
+                    <TextView
+                        android:text="POR: INVETSA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Guardar Datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Guardar" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Cancelar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cancelar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    tools:context="com.grayhatcorp.invetsa.invetsa.Principal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="172dp"
+            android:layout_height="206dp"
+            app:srcCompat="@drawable/invetsa"
+            android:id="@+id/imageView" />
+
+        <Button
+            android:text="Sistema Integral de Monitoreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SIM" />
+
+        <Button
+            android:text="Hoja de Verificación"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/HojaVerificacion" />
+        <Button
+            android:text="Mantenimiento - maquina twin shot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MaquinaTwinShot" />
+        <Button
+            android:text="Mantenimiento - MAQUINA SPRAVAC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MaquinaSpravac" />
+        <Button
+            android:text="Mantenimiento - MAQUINA Zootec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MaquinaZootec" />
+        <Button
+            android:text="Actualizar Datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Actualizar" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>

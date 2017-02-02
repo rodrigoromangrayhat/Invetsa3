@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sistema_integral_monitoreo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.grayhatcorp.invetsa.invetsa.SistemaIntegralMonitoreo">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:text="Empresa:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtempresa"
+                        android:layout_below="@+id/textView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+
+                        android:textStyle="normal|bold" />
+
+                    <!--       <EditText
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:inputType="textPersonName"
+                               android:ems="10"
+                               android:id="@+id/editTextEmpresa" />   -->
+
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoEmpresa"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:text="Granja:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextGranja" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:text="Edad:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEdad"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextEdad" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:text="Sexo:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textSexo"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextSexo" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:text="Zona:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+
+                        android:layout_below="@+id/textView"
+                        android:layout_toRightOf="@+id/editTextEmpresa"
+                        android:layout_toEndOf="@+id/editTextEmpresa"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextZona" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:text="Galpon:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textGalpon"
+                        android:textStyle="normal|bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:text="Nro Pollos:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textNroPollos"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextNroPollos" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:text="Fecha:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textFecha"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:ems="10"
+                        android:id="@+id/editTextGalpon"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#74af23"
+                    >
+
+                    <TextView
+                        android:text="Peso Corporal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPesoCorporal"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Peso Bursa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPesoBursa"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Peso de Bazo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPesodeBazo"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Peso de Timo(g)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPesoTimo"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Peso de Higado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPesoHigado"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Indice Bursal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textIndiceBursal"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Indice Timico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textIndiceTimico"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Indice Hepatico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textIndiceHepatico"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Bursometro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textBursometro"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPcorporal1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBursa1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBazo1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPTimo1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPHigado1" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceBursal1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceTimico1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceHepatico1" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextBursometro1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPcorporal2" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBursa2" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBazo2" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPTimo2" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPHigado2" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceBursal2" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceTimico2" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceHepatico2" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextBursometro2" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPcorporal3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBursa3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBazo3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPTimo3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPHigado3" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceBursal3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceTimico3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceHepatico3" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextBursometro3" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPcorporal4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBursa4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBazo4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPTimo4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPHigado4" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceBursal4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceTimico4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceHepatico4" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextBursometro4" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPcorporal5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBursa5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPBazo5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPTimo5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPHigado5" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceBursal5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceTimico5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextIndiceHepatico5" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextBursometro5" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#74af23"
+                    >
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoPcorporal" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoPBursa" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoPBazo" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoPTimo" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoPHigado" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoIndiceBursal" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoIndiceTimico" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoIndiceHepatico" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextResultadoBursometro" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:text="1.-Pico(aftas)"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewPico"
+                        android:textStyle="normal|bold"
+                        />
+
+                    <TextView
+                        android:text="2.-Petequias"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewPetequias" />
+
+                    <TextView
+                        android:text="3.-Tarsos"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewTarsos" />
+
+                    <TextView
+                        android:text="4.-Relacion Morfometrica Bursa/Bazo"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewRelacionMorfometrica" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <CheckBox
+                        android:text="Comisura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxComisura" />
+
+                    <CheckBox
+                        android:text="Pechuga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPechuga" />
+
+                    <CheckBox
+                        android:text="Fragil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxFragil" />
+
+                    <CheckBox
+                        android:text="A Favor de la Bursa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxFavorBursa" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:text="Paladar Duro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPaladarDuro" />
+
+                    <CheckBox
+                        android:text="Pierna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPierna" />
+
+                    <CheckBox
+                        android:text="Flexible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPFlexible" />
+
+                    <CheckBox
+                        android:text="A Favor de Bazo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxFavorBaso" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <CheckBox
+                        android:text="Paladar Blando"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPaladorBlando" />
+
+                    <CheckBox
+                        android:text="Esternón"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxesternon" />
+
+                    <CheckBox
+                        android:text="Duro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxDuro" />
+
+                    <CheckBox
+                        android:text="Relacion 1 / 1:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxRelacion" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:text="Necrosis de la Punta de la Lengua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNecrosis" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:text="5.- Apariencia de los Pliegues Internos de la Bursa:"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewApariencia"
+                        />
+
+                    <TextView
+                        android:text="6.- Tamaño y Aparaencia del Timo:"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/textViewAparienciaTimo" />
+
+                    <TextView
+                        android:text="7.- Sacos Aéreos"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewSacosaereos" />
+
+                    <TextView
+                        android:text="8.- Traquea"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewTraquea" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <CheckBox
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNormal5" />
+
+                    <CheckBox
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNormal6" />
+
+                    <CheckBox
+                        android:text="Normales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNormales7" />
+
+                    <CheckBox
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNormal8" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:text="Anormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxAnormal5" />
+
+                    <CheckBox
+                        android:text="Anormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxAnormal6" />
+
+                    <CheckBox
+                        android:text="Aerosaculitis Abdominal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPAeroSacuditis" />
+
+                    <CheckBox
+                        android:text="Congestionada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxCongestionada" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView23" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView24" />
+
+                    <CheckBox
+                        android:text="Aerosaculitis Toracica:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxAeroToracica" />
+                    <CheckBox
+                        android:text="Hemorragica:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxHemorragica" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView25" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView26" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView29" />
+
+                    <CheckBox
+                        android:text="Con Mucosidad:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxMucosidad" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:text="9.-Cornetes Nasales:"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewCornetes"
+                        />
+
+                    <TextView
+                        android:text="10.- Higados:"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/textViewHigados" />
+
+                    <TextView
+                        android:text="11.- Vesicula Biliar"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewVEsiculaBiliar" />
+
+                    <TextView
+                        android:text="12.- Proventriculo"
+                        android:layout_width="270px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewProventriculo" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:text="Normal:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxCornetasNormal" />
+
+                    <CheckBox
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxHigadoNormal" />
+
+                    <CheckBox
+                        android:text="Llena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxVEsiculaLlena" />
+
+                    <CheckBox
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxProventriculoNormal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:text="Congestionado:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxCornetasCongestionada" />
+
+                    <CheckBox
+                        android:text="Inflamado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxHigadoInflamado" />
+
+                    <CheckBox
+                        android:text="Vacia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxVesiculaVacia" />
+
+                    <CheckBox
+                        android:text="Proventriculitis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxProventriculitis" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView223" />
+
+                    <CheckBox
+                        android:text="Palido y friable:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxHigadoPalido" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView222" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView224" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView225" />
+
+                    <CheckBox
+                        android:text="Moteado:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxHigadoMoteado" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView226" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView228" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView210" />
+
+                    <CheckBox
+                        android:text="Punto de exudado:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxHigadoexudado" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView211" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView212" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:text="13.- Ulceracion de Mollejas:"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewUlceracion"
+                        />
+
+                    <TextView
+                        android:text="14.- Intestinos:"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+
+                        android:id="@+id/textViewIntestinos" />
+
+                    <TextView
+                        android:text="15.- Coccidia"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewCoccidia" />
+
+                    <TextView
+                        android:text="16.- Ciegos (contenido)"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal|bold"
+                        android:id="@+id/textViewCiegos" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Grado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2"
+                            android:layout_weight="1"
+                            tools:text="Grado" />
+
+                        <TextView
+                            android:text="Cantidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView4"
+                            android:layout_weight="1"
+                            tools:text="Cantidad" />
+
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:text="Normal:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxIntestinoNOrmal" />
+
+                    <CheckBox
+                        android:text="Acervulina:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxAcervulina" />
+
+                    <CheckBox
+                        android:text="Normal:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxCiegosNormal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="0"
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewGrado0" />
+                        <EditText
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EditTextGrado0"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:text="Enteritis (yeyuno):"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxEnteritisyeyuno" />
+
+                    <CheckBox
+                        android:text="Maxima:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxMaximaCoccidia" />
+
+                    <CheckBox
+                        android:text="Tiflitis Erosiva:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxTiflitis" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="1"
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewGrado1" />
+                        <EditText
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EditTextGrado1"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:text="Equimosis:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxEquimosis" />
+
+                    <CheckBox
+                        android:text="Tenelia:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxTenelia" />
+
+                    <CheckBox
+                        android:text="Placas diftericas:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPlacasdiftericas" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="2"
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewGrado2" />
+                        <EditText
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EditTextGrado2"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:text="Desp. Mucosa:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxMucosa" />
+
+                    <CheckBox
+                        android:text="Necrafix:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNecrafix" />
+
+                    <CheckBox
+                        android:text="Gaseosos:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxGaseosos" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="3"
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewGrado3" />
+                        <EditText
+                            android:layout_width="100px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EditTextGrado3"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:text="Enteritis Mucoide:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxEnteritisMucoide" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView215" />
+
+                    <CheckBox
+                        android:text="Gaseosos (cont):"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxGaseososCont" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView217" />
+                    <CheckBox
+                        android:text="Transito Rapido:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxTransitoRapido" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView219" />
+                    <CheckBox
+                        android:text="Liquido (cont):"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxLiquidoCont" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView220" />
+                    <CheckBox
+                        android:text="Gas / Espuma:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxGasEspuma" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="270px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView221" />
+                    <CheckBox
+                        android:text="Sangre (cont):"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxSangre" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:text="17.- Tonsillas Lleocecales:"
+                        android:layout_width="320px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewTonsillas"
+                        />
+
+                    <TextView
+                        android:text="18.- Placas de Peyer:"
+                        android:layout_width="320px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/textViewPlacasPeyer" />
+
+                    <TextView
+                        android:text="19.- Necrosis Cabeza de Femur"
+                        android:layout_width="320px"
+                        android:textStyle="normal|bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewNecrosis" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <CheckBox
+                        android:text="Reactiva:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxReactiva17" />
+
+                    <CheckBox
+                        android:text="Reactiva:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxreactiva18" />
+                    <CheckBox
+                        android:text="Presencia:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxPresencia" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <CheckBox
+                        android:text="No Reactiva:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNoReactiva17" />
+
+                    <CheckBox
+                        android:text="No Reactiva:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxNoreactiva18" />
+                    <CheckBox
+                        android:text="Ausencia:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBoxAusencia" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Otras Observaciones"
+
+                            android:id="@+id/TextViewObservaciones"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:ems="10"
+                            android:text="Coloca a qui tus observaciones"
+                            android:id="@+id/editTextObservaciones" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Comentarios"
+                            android:id="@+id/TextViewComentarios"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:ems="10"
+                            android:id="@+id/editTextComentarios" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/imagenes"
+                        android:text="Imagenes:"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView1"
+                        app:srcCompat="@drawable/a1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        app:srcCompat="@drawable/a2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
+                        app:srcCompat="@drawable/a1" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"
+                        app:srcCompat="@drawable/a2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"
+                        app:srcCompat="@drawable/a1" />
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Guardar Datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Guardar" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Cancelar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cancelar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

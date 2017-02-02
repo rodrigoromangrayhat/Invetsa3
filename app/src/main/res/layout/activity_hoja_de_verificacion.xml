@@ -1,0 +1,3831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hoja_de_verificacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.grayhatcorp.invetsa.invetsa.HojaDeVerificacion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora Ingreso:"
+                        android:id="@+id/TextViewHoraIngreso"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:ems="10"
+                        android:id="@+id/editTextHoraIngreso"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora Salida:"
+                        android:id="@+id/TextViewHoraSalida"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:ems="10"
+                        android:id="@+id/editTextHoraSalida"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Empresa:"
+                        android:id="@+id/TextViewEmpresa"/>
+
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoEmpresa"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unidad:"
+                        android:id="@+id/TextViewUnidad"/>
+                    <AutoCompleteTextView
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoUnidad"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Responsable de Invetsa:"
+                        android:id="@+id/TextViewREsponsableInvetsa"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/EditTextResponsable"
+                        android:ems="10"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TextViewFecha"
+                        android:text="Fecha:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/EditTextFEcha"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TectViewREsponsableInncubadora"
+                        android:text="Resp. Incubadora:"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/EditTextResIncubadora"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Granja:"/>
+
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoGranja"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#74ac23">
+
+                    <TextView
+                        android:text="Linea Genetica"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textLinaGenetica"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="COBB"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textCOOB"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ROSS"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textROSS"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="Pollos / dia (promedio)"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textpollosPromedio"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Nro de nacimientos / semana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textNacimientosSemana"
+                        android:textAlignment="center"
+
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="2 (M y S)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textMyS"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="Ross - Cobb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textROSSCOBB"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editTextPollosDia" />
+                </TableRow>
+                <TextView
+                    android:text="Laboratorio de Preparacion de Vacuna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textprepacionVacuna"
+                    android:background="#74ac23"
+                    android:textStyle="normal|bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="ESPERADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsperadoCobb"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ENCONTRADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEncontradoCobb"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ESPERADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsperadoRoss"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ENCONTRADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEncontradoRoss"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Temperatura 24 a 27 °C "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text2427C"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerTemperatura"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:entries="@array/Temperatura"/>
+
+                    <TextView
+                        android:text="Humedad 65 % HR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textHumedad"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerHumedad"
+                        android:textAlignment="center"
+                        android:entries="@array/Humedad"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Ventilacion Forzada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textVentilacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/spinnerVentilacion"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Presion Positiva"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPresion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/spinnerPresion"
+                        android:entries="@array/Humedad"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Limpieza despues de c/vacunacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textLimpiezaVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerLimpiezaVacunacion"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Desinfeccion Post limpieza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textDesinfeccion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerDesinfeccion"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+                <TextView
+                    android:text="Equipo Invetsa-Temp y Otros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textequiposInvetsa"
+                    android:background="#74ac23"
+                    android:textStyle="normal|bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="ESPERADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsperadoCobbEquipo"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ENCONTRADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEncontradoCobbEquipo"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ESPERADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsperadoRossEquipo"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ENCONTRADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEncontradoRossEquipo"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Guates y Lentes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textGuatesLentes"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerGuantesLentes"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Calentador de Agua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textCalentadordeAgua"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerCalentadordeAgua"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Recipiente de Agua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textRecipiente"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerRecipientedeAgua"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Termometro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textTermometro"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerTermometro"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="T °27 a 37° C (promedio 32°C)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textprometioTemperatura"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerPromedioTemperatura"
+                        android:textAlignment="center"
+                        android:entries="@array/Temperatura"/>
+
+                    <TextView
+                        android:text="Soporte de Ampollas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textSoporteAmpollas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerSoporteAmpollas"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Rompe Ampollas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textRompeAmpollas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerRompeAmpollas"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Jeringas 5 y/o 10 ml"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textjeringas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerJeringas"
+                        android:textAlignment="center"
+                        android:entries="@array/Jeringas"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Aguja 18 G x 18 1 1/2 (rosada)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textAgujas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerAgujas"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Alcohol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textAlcohol"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerAlcohol"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Algodon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textAlgodon"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinneralgodon"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Papel Toalla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPapelToalla"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerPapel"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Colorante Marek Doisis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textColorantes"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnercolorantes"
+                        android:textAlignment="center"
+                        android:entries="@array/Humedad"/>
+
+                    <TextView
+                        android:text="Tuberia nueva para vacuna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textTuberia"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerTuberia"
+                        android:textAlignment="center"
+                        android:entries="@array/Tuberia"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Conectores Y"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textConectores"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerConectores"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Esterilizador/Autoclave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsterilizador"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerEsterilizador"
+                        android:textAlignment="center"
+                        android:entries="@array/Esterilizador"/>
+                </TableRow>
+
+                <TextView
+                    android:text="Sala de Vacunacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSalaVacunacion"
+                    android:background="#74ac23"
+                    android:textStyle="normal|bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="ESPERADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsperadoCobbVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ENCONTRADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEncontradoCobbVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ESPERADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEsperadoRossVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="ENCONTRADO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textEncontradoRossVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Mesa Circular-Lineal-Individual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textMEsa"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerMesa"
+                        android:textAlignment="center"
+                        android:entries="@array/Mesa"/>
+
+                    <TextView
+                        android:text="Nro de Maquinas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textMaquinas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editTextMaquinas" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Cambio de Agujas c/2,000 pollos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textCambioAgujas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerCambioAgujas"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Cajas plasticas / carton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textCajas"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerCajas"
+                        android:textAlignment="center"
+                        android:entries="@array/Cajas"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="T °24 a 27 °C"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textTemperaturaVAcunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoTemperaturaVacunacion"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="Humedad 60 a 70% HR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textHumedadVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <AutoCompleteTextView
+                        android:text=""
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoHumedadVacunacion"
+                        android:layout_weight="1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Ventilacion Forzada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textVentilacionForzada"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/spinnerVentilacionForzada"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Presion Negativa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textPresionVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerPresionVacunacion"
+                        android:textAlignment="center"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Limpieza despues de c/vacunacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textLimpiezaSalaVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/spinnerLimpiezaSalaVacunacion"
+                        android:entries="@array/Ventilacion"/>
+
+                    <TextView
+                        android:text="Desinfeccion Post limpieza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textDesinfeccionSalaVacunacion"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/spinnerDesinfeccionSalaVacunacion"
+                        android:entries="@array/Ventilacion"/>
+                </TableRow>
+                <TextView
+                    android:text="MANIPULACION Y DILUCION DE LA VACUNA CONGELADA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textVacunaCongelada"
+                    android:background="#74ac23"
+                    android:textStyle="normal|bold" />
+                <TextView
+                    android:text="Asignar con (0,1) si el procedimiento estuviese siendo seguido: (Puntaje Máximo 2.0)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal|bold" />
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="1"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Verificación del nivel de nitrógeno en formato (mínimo 6 pulgadas), obligatorio los días de vacunación 15 pulg."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText1" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="2"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Diluyente usado en buenas condiciones rojo y. transparente Gentamicina 10%  9 ml  x  800ml "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText2" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="3"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Jeringas descartables individuales para cada tipo de vacuna, colorante y antibiótico (no usan) (Lab. Invesa) "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText3" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="4"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Tiempo mínimo para añadir antibiótico y colorante antes de preparar la vacuna  15 minutos "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText4" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="5"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Uso de colorante y dosis de 0.5 ml para bolsas 200 y 400 ml , 1 ml para 800 ml y 1.5 ml para 1200 y 1600 ml"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText5" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="6"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Jeringa cargada con 2 ml de diluyente para extraer la vacuna ya descongelada "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText6" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="7"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Uso de guantes y protector ocular para manipulación de vacunas congeladas al retirar la vacuna del tanque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText7" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="8"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Buenas condiciones de funcionamiento del Invetsa-temp de 27 a 37 º C (promedio 32º C)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText8" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="9"
+                        android:layout_width="20px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Numero de ampollas retiradas por vez para descongelación, máximo 2 ampollas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText9" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="10"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Tiempo máximo para descongelamiento de la ampolla de 1 minuto y reconstitución en diluyente 30 segundos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText10" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="11"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Uso de pajilla de aluminio para descongelamiento de las ampollas en el agua, evita introducir la mano en el agua "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText11" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="12"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Favorecer el descongelamiento de la ampolla en forma suave (movimiento circulares y verticales)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText12" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="13"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Secar las ampollas con papel toalla y usar el rompe ampollas  "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText13" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="14"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Uso del soporte de ampollas, absorción y reconstitución de la vacuna en el diluyente suave y sin presión en Jeringa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText14" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="15"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Uso de aguja adecuada para la extracción de la vacuna, 18 G x 1 ½” (color rosado) "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText15" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="16"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Realización de enjuague de ampollas (incluye cuerpo y tapa de la ampolla)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText16" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="17"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Secuencia correcta de preparación de la vacuna (antibiótico, colorante y 15 minutos después  vacunas congeladas)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText17" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="18"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Tiempo de consumo de la solución vacunal preparada máximo 45 minutos y homogenizar la vacuna cada 10 minut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText18" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="19"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Perfecta distribución de las mangueras que conducen la vacuna (levemente estiradas, evitando el efecto hamaca)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText19" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="20"
+                        android:layout_width="25px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Conteo celular - % de Viabilidad mayor a 86 %  Vaxxitek  x  4000 ds  Serie RM 470   Vence 13-07-18 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="4"
+                        android:id="@+id/editText20" />
+                </TableRow>
+                <TextView
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextViewSumatoria"
+                    android:gravity="right"
+                    android:text="SUMATORIA:"/>
+                <TextView
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextViewtTotalSumatoria"
+                    android:gravity="right"
+                    android:text="TOTAL:"/>
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#74ac23"
+            android:textStyle="normal|bold"
+            android:text="MANTENIMIENTO Y LIMPIEZA DE LAS VACUNADORAS ACCUVAC   "/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Asignar con una (X) las irregularidades encontradas:	 (Puntaje Máximo Promedio 1.5)		          Puntaje:"/>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Nombre de Vacunador"
+                    android:layout_width="250px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text="N° de Twin Shot-Zootec"
+                    android:layout_width="100px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text="* Irregularidades"
+                    android:layout_width="500px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="normal|bold" />
+            </TableRow>
+        </TableLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text=""
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="1"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="2"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="3"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="4"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="5"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="6"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="7"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="8"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="9"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="10"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="11"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="12"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="13"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="14"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="15"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Maria Rea"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="1"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MariaRea15" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Rosaisela"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="2"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rosa15" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Celia"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="3"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celia15" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Neida"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="4"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Neida15" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Isora"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="5"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Isora15" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Carmen"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="6"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/carmen15" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Silvia"
+                        android:layout_width="250px"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="7"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/silvia15" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Selena"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="8"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Selena15" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Viviana"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="9"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Viviana15" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Angelica Cuellar"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="10"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Angelica15" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Cira"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="11"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cira15" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Keila"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="12"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila1" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila2" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila3" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila4" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila5" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila6" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila7" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila8" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila9" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila10" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila11" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila12" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila13" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila14" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Keila15" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextViewSumatoriaVacunadorasACCUVAC"
+                    android:gravity="right"
+                    android:text="PROMEDIO:"/>
+                <TextView
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextViewtTotalSumatoriaVacunadorasACCUVAC"
+                    android:gravity="right"
+                    android:text="TOTAL:"/>
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:text="Irregularidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="1. Acumulo de suciedad o puntos sucios en la placa de sensores Twin Touch - Zootec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="2. Falta de uno o más tornillos visibles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="3. Presión de aire comprimido fuera de rango recomendado (60 - 65 psi para Accuvac y 65 – 75 psi para Twin Shot)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="4. Colocación incorrecta de la aguja (bisel hacia arriba)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="5. Inadecuada regulación de la salida de la aguja o agujas, que provoca que vacuna quede en la parte interna de la maquina "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="6. Colocación inadecuada de las jeringas y/o mangueras descartables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="7. Falta de calibración de la dosis 0.2 ml en Marek y 0.1 ml en Oleosas "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="8. No verificar la calibración de la dosis de la maquina cada 2,000 pollos vacunados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="9. No cumplen con el cambio de agujas de la maquina cada 2,000 pollos vacunados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="10. No tienen asperjadores con alcohol para la limpieza de la maquina cada 500 pollos vacunados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="11. No se lavan las manos y desinfectan antes de  realizar el cambio de agujas de las maquinas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="12. Acumulo de suciedad entre el modulo inyector y el modulo inferior de la maquina "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="13. Desarmado incorrecto y lavado inadecuado de las maquinas, uso de detergente y material abrasivos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="14. Inadecuada esterilización de la válvula de control, debe ser a 121° C, a 15 psi de presión por 20 minutos envuelto en papel craf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="15. Otras irregularidades. Especificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal|bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextObservaciones"/>
+        </LinearLayout>
+
+        <TextView
+            android:text="CONTROL DE INDICE DE EFICIENCIA DE VACUNACION Y PRODUCTIVIDAD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#74ac23"
+            android:textStyle="normal|bold">
+        </TextView>
+        <TextView
+            android:text="(Puntaje Máximo Índice de Eficiencia  5.5)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold">
+        </TextView>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text=""
+                    android:layout_width="250px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="250px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="30px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="normal|bold" />
+                <TextView
+                    android:text=""
+                    android:layout_width="250px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="normal|bold" />
+                <TextView
+                    android:text=""
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center"
+
+                    android:textStyle="normal|bold" />
+
+            </TableRow>
+        </TableLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Nombre de Vacunador"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="N° Pollos vacunados/hora"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Puntaje"
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="N° Pollos Controlados"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="N° Pollos No vacunados"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="Heridos"
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="Mojados"
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="Mala posicion"
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="N° Pollos vacu. correctamente"
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:text="% de Eficiencia"
+                        android:layout_width="50px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Maria Rea"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosMaria" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeMaria" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosMaria" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosMaria" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosMaria" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosMaria" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionMaria"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteMaria"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaMaria" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Rosaisela"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosRosaisela" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeRosaisela" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosRosaisela" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosRosaisela" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosRosaisela" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosRosaisela" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionRosaisela"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteRosaisela"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaRosaisela" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Celia"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosCelia" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeCelia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosCelia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosCelia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosCelia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosCelia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionCelia"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteCelia"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaCelia" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Neida"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosNeida" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeNeida" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosNeida" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosNeida" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosNeida" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosNeida" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionNeida"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteNeida"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaNeida" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Isora"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosIsora" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeIsora" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosIsora" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosIsora" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosIsora" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosIsora" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionIsora"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteIsora"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaIsora" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Carmen"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosCarmen" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeCarmen" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosCarmen" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosCarmen" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosCarmen" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosCarmen" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionCarmen"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteCarmen"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaCarmen" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Silvia"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosSilvia" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeSilvia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosSilvia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosSilvia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosSilvia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosSilvia" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionSilvia"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteSilvia"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaSilvia" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Selena"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosSelena" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeSelena" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosSelena" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosSelena" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosSelena" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosSelena" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionSelena"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteSelena"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaSelena" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Viviana"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosViviana" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeViviana" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosViviana" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosViviana" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosViviana" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosViviana" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionViviana"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteViviana"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaViviana" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Angelica Cuellar"
+                        android:layout_width="250px"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextVacunadosAngelica" />
+
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="4"
+                        android:id="@+id/editTextPuntajeAngelica" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosControladosAngelica" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosNoVacunadosAngelica" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosHeridosAngelica" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextPollosMojadosAngelica" />
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextMalaPocisionAngelica"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="3"
+                        android:id="@+id/editTextVAcunadosCorrectamenteAngelica"/>
+                    <EditText
+                        android:layout_width="100px"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/editTextEficienciaAngelica" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right"
+                    android:text="PROMEDIO:"/>
+                <TextView
+                    android:layout_width="50px"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextViewtTotalControlEficiencia"
+                    android:gravity="right"
+                    android:text="TOTAL:"/>
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:text="PUNTAJE TOTAL OBTENIDO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#74ac23"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:text="PUNTOS DE CONTROL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textStyle="normal|bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="MANIPULACION Y DILUCION DE LA VACUNA CONGELADA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal|bold" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="3"
+                android:id="@+id/editTextManipulacionDisolucion" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="MANTENIMIENTO Y LIMPIEZA DE LAS VACUNADORAS ACCUVAC - ZOOTEC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal|bold" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="3"
+                android:id="@+id/editTextMantenimientoyLimpiesa" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="INDICE DE EFICIENCIA DE VACUNACIÓN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal|bold" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="3"
+                android:id="@+id/editTextIndicedeEficiencia" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="PRODUCTIVIDAD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal|bold" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="3"
+                android:id="@+id/editTextProductividad" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="PUNTAJE TOTAL:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextViewtPUNTOSDECONTROL"
+            android:gravity="right"
+            android:text="TOTAL:"/>
+
+        <TextView
+            android:text="RECOMENDACIONES"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DAF752"
+            android:textStyle="normal|bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextRecomendaciones" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            app:srcCompat="@drawable/invetsa"
+                            android:id="@+id/FirmaInvetsa"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="Por INVETSA: Mvz Dania Cespedes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="normal|bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            app:srcCompat="@drawable/invetsa"
+                            android:id="@+id/FirmaEmpresa"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="EMPRESA: Ing. Ivan Lopez"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="normal|bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Guardar Datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Guardar" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:text="Cancelar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cancelar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
